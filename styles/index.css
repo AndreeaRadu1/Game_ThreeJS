@@ -1,0 +1,163 @@
+body {
+    margin: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#info{
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: black;
+    background-color: transparent;
+    border: 1px solid black;
+    padding: 0.5rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#score-row, #distance-row{
+    display: flex;
+}
+
+#score, #distance{
+    margin-left: 0.5rem;
+}
+
+.divider{
+    height: 2px;
+    width: 100%;
+    background-color: black;
+    margin: 0.5rem 0;
+}
+
+input[type=range]{
+    -webkit-appearance: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 300px;
+    height: 5px;
+    background: #ddd;
+    border: none;
+    border-radius: 3px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: rgb(174, 23, 81);
+    margin-top: -4px;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #ccc;
+}
+
+#info, #title{
+    font-weight: bold;
+}
+
+#intro-panel, #game-over-panel{
+    display: grid;
+    place-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* background-color: black; */
+    background-image: url('../img/pirate_background.jpg');
+    background-size: cover;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    z-index: 10;
+}
+
+#game-over-panel{
+    display: none;
+}
+
+#intro-column, #game-over-column{
+    text-align: center;
+}
+
+#intro-title, #game-over-title{
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    /* padding-bottom: 90%; */
+}
+
+#start-button, #replay-button{
+    background-color: rgb(174, 23, 81);
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border: 1px solid white;
+    padding: 0.5rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    border-radius: 30%;
+    border: none;
+    /* border-color: rgb(241, 175, 200); */
+}
+
+#replay-button{
+    /* justify-content: center; */
+    margin-top: 100%;
+}
+
+/* #start-button:hover, #replay-button{
+    background-color: rgb(174, 23, 81);
+} */
+
+#game-controls{
+    font-size: 1.3rem;
+    /* margin-top: 20rem; */
+    position: center;
+    padding-top: 30%;
+    /* 
+    position: absolute;
+    bottom: 5%; */
+}
+
+#game-details{
+    font-size: 1.3rem;
+    margin-bottom: 70%;
+}
+
+#game-over-score-row, #game-over-distance-row{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+#game-over-score, #game-over-distance{
+    margin-left: 0.5rem;
+}
+
+.score-popup {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: score-popup 1s ease-in-out;
+    animation-iteration-count: 1;
+    font-size: 30px;
+    color: black;
+}
+
+@keyframes score-popup {
+    0% {
+        top: 33%;
+        opacity: 1;
+    }
+    100% {
+        top:25%;
+        opacity: 0;
+    }
+}
